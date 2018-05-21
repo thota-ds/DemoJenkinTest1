@@ -1,1 +1,1 @@
-SampleSOATest1,default,1.0,true,../SampleSOA/SOA
+SampleSOATest1,default,1.0,true,../SampleSOATest1/SOA
