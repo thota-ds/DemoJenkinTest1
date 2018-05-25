@@ -1,1 +1,2 @@
 SampleSOATest1,default,1.0,true,../SampleSOATest1/SOA
+SampleSOATest2,default,1.0,true,../SampleSOATest2/SOA
