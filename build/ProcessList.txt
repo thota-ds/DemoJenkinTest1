@@ -1,3 +1,4 @@
 SampleSOATest1,default,1.0,true,../SampleSOATest1/SOA
 SampleSOATest2,default,1.0,true,../SampleSOATest2/SOA
 SampleSOATest3,default,1.0,true,../SampleSOATest3/SOA
+SampleSOATest4,default,1.0,true,../SampleSOATest4/SOA
