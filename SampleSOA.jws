@@ -25,5 +25,6 @@
    </list>
    <list n="listOfChildren">
       <hash><url n="URL" path="SampleSOATest1/SampleSOATest1.jpr"/></hash>
+      <hash><url n="URL" path="SampleSOATest2/SampleSOATest2.jpr"/></hash>
    </list>
 </jws:workspace>
