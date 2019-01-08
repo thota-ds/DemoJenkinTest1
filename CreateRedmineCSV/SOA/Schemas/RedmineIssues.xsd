@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.redmine.org"
+            targetNamespace="http://www.redmine.org" elementFormDefault="qualified">
+  <xsd:element name="issues">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="issue" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="id" type="xsd:integer"/>
+              <xsd:element name="project">
+                <xsd:complexType>
+                  <xsd:attribute name="id" type="xsd:integer"/>
+                  <xsd:attribute name="name" type="xsd:string"/>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="tracker">
+                <xsd:complexType>
+                  <xsd:attribute name="id" type="xsd:integer"/>
+                  <xsd:attribute name="name" type="xsd:string"/>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="status">
+                <xsd:complexType>
+                  <xsd:attribute name="id" type="xsd:integer"/>
+                  <xsd:attribute name="name" type="xsd:string"/>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="priority">
+                <xsd:complexType>
+                  <xsd:attribute name="id" type="xsd:integer"/>
+                  <xsd:attribute name="name" type="xsd:string"/>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="author">
+                <xsd:complexType>
+                  <xsd:attribute name="id" type="xsd:integer"/>
+                  <xsd:attribute name="name" type="xsd:string"/>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="assigned_to" minOccurs="0">
+                <xsd:complexType>
+                  <xsd:attribute name="id" type="xsd:integer"/>
+                  <xsd:attribute name="name" type="xsd:string"/>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="category" minOccurs="0">
+                <xsd:complexType>
+                  <xsd:attribute name="id" type="xsd:integer"/>
+                  <xsd:attribute name="name" type="xsd:string"/>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="parent" minOccurs="0">
+                <xsd:complexType>
+                  <xsd:attribute name="id" type="xsd:integer"/>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="subject" type="xsd:string"/>
+              <xsd:element name="description" type="xsd:string"/>
+              <xsd:element name="start_date" type="xsd:date"/>
+              <xsd:element name="due_date" type="xsd:date"/>
+              <xsd:element name="done_ratio" type="xsd:integer"/>
+              <xsd:element name="is_private" type="xsd:string"/>
+              <xsd:element name="estimated_hours"/>
+              <xsd:element name="custom_fields">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="custom_field" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="value">
+                            <xsd:complexType mixed="true">
+                              <xsd:sequence>
+                                <xsd:element name="value" minOccurs="0" type="xsd:string"/>
+                              </xsd:sequence>
+                              <xsd:attribute name="type" type="xsd:string"/>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="id" type="xsd:integer"/>
+                        <xsd:attribute name="name" type="xsd:string"/>
+                        <xsd:attribute name="multiple" type="xsd:string"/>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="type" type="xsd:string"/>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="created_on" type="xsd:dateTime"/>
+              <xsd:element name="updated_on" type="xsd:dateTime"/>
+              <xsd:element name="closed_on"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="total_count" type="xsd:integer"/>
+      <xsd:attribute name="offset" type="xsd:integer"/>
+      <xsd:attribute name="limit" type="xsd:integer"/>
+      <xsd:attribute name="type" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="Request"/>
+</xsd:schema>

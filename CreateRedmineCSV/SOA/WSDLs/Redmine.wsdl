@@ -1,0 +1,33 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="Redmine"
+     targetNamespace="http://xmlns.oracle.com/SampleSOA/CreateRedmineCSV/Redmine"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:client="http://xmlns.oracle.com/SampleSOA/CreateRedmineCSV/Redmine"
+     xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+     xmlns:ns1="http://www.redmine.org"
+    >
+    <plnk:partnerLinkType name="Redmine">
+        <plnk:role name="RedmineProvider" portType="client:Redmine"/>
+    </plnk:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:client="http://xmlns.oracle.com/SampleSOA/CreateRedmineCSV/Redmine" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+             xmlns:ns1="http://www.redmine.org">
+            <import namespace="http://xmlns.oracle.com/SampleSOA/CreateRedmineCSV/Redmine" schemaLocation="../Schemas/Redmine.xsd"/>
+        </schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:client="http://xmlns.oracle.com/SampleSOA/CreateRedmineCSV/Redmine" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+             xmlns:ns1="http://www.redmine.org">
+            <xsd:import namespace="http://www.redmine.org" schemaLocation="../Schemas/RedmineIssues.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="RedmineRequestMessage">
+        <wsdl:part name="payload" element="client:process"/>
+    </wsdl:message>
+    <wsdl:portType name="Redmine">
+        <wsdl:operation name="process">
+            <wsdl:input message="client:RedmineRequestMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

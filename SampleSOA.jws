@@ -24,6 +24,7 @@
       <string v="oracle.jdeveloper.model.PathsConfiguration/ResourceBundlesContentSet"/>
    </list>
    <list n="listOfChildren">
+      <hash><url n="URL" path="CreateRedmineCSV/CreateRedmineCSV.jpr"/></hash>
       <hash><url n="URL" path="SampleSOATest1/SampleSOATest1.jpr"/></hash>
       <hash><url n="URL" path="SampleSOATest2/SampleSOATest2.jpr"/></hash>
    </list>
